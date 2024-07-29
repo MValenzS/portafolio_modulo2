@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!--Fuente JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--Fuente Roboto-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="assets/js/script.js" defer></script>
+</head>
+
+<body>
+    <header class=" text-white text-center py-5">
+        <h1>Marcia Valenzuela</h1>
+        <p>- Desarrolladora FullStack Python Trainne -</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Inicio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="about" class="container py-5">
+        <p>Hola, soy una apasionada por la creación de interfaces de usuario
+            intuitivas, atractivas y funcionales.
+            Estoy en una búsqueda constante de crecimiento y desarrollo profesional, siempre dispuesta a aprender nuevas
+            tecnologías y mejorar mis habilidades.<br>
+            Creo firmemente en la importancia de mantenerse actualizada en un campo en constante evolución como el
+            desarrollo web y me esfuerzo por superar los desafíos y alcanzar la
+            excelencia en cada proyecto que emprendo.
+        </p>
+        <div class="about-image ml-4 flex-shrink-0">
+            <img src="assets/css/img/development_re_wwsn.svg" alt="Sobre mí" class="img-fluid">
+        </div>
+    </section>
+
+    <section id="skills" class="container py-5">
+        <h2>Habilidades</h2>
+        <ul>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>Bootstrap</li>
+            <li>HTML5 CSS3</li>
+            <li>Figma</li>
+        </ul>
+    </section>
+
+    <!--SECCION PROYECTOS -->
+    <section id="projects">
+        <h2>Proyectos</h2>
+    <div class="container d-flex align-items-center justify-content-center position-relative flex-wrap">
+        <div class="card d-flex position-relative flex-column">
+            <div class='imgContainer'>
+                <img src='assets/css/img/1.png'>
+            </div>
+            <div class="content">
+                <h2>Proyecto Uno</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget velit tristique,
+                    sollicitudin leo viverra, suscipit neque. Aliquam ut facilisis urna, in pretium nibh. Morbi in leo
+                    in eros commodo volutpat ac sed dolor.</p>
+            </div>
+        </div>
+        <div class="card d-flex position-relative flex-column">
+            <div class='imgContainer'>
+                <img src='assets/css/img/3.png'>
+            </div>
+            <div class="content">
+                <h2>Proyecto Dos</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget velit tristique,
+                    sollicitudin leo viverra, suscipit neque. Aliquam ut facilisis urna, in pretium nibh. Morbi in leo
+                    in eros commodo volutpat ac sed dolor.</p>
+            </div>
+        </div>
+        <div class="card d-flex position-relative flex-column">
+            <div class='imgContainer'>
+                <img src='assets/css/img/4.png'>
+            </div>
+            <div class="content">
+                <h2>Proyecto Tres</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget velit tristique,
+                    sollicitudin leo viverra, suscipit neque. Aliquam ut facilisis urna, in pretium nibh. Morbi in leo
+                    in eros commodo volutpat ac sed dolor.</p>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!--Seccion de contacto-->
+    <section id="contact" class="container py-4">
+        <h2>Contacto</h2>
+        <div id="modalForm" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Su mensaje ha sido enviado<br> Pronto recibirá una respuesta.</p>
+            </div>
+        </div>
+        <div class="d-flex flex-wrap justify-content-between">
+            <div class="contact-form flex-grow-1 mr-3">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" class="form-control" id="name" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Tu email" required
+                            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,3}">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Tu mensaje" req></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="modalBtn">Enviar</button>
+
+                </form>
+            </div>
+            <div class="contact-info flex-shrink-0">
+                <ul class="list-unstyled">
+                    <li><a href="https://www.linkedin.com" target="_blank"><img src="assets/css/img/linkedin-100.png"
+                                alt="LinkedIn" class="icon"> LinkedIn</a></li>
+                    <li><a href="https://www.twitter.com" target="_blank"><img src="assets/css/img/twitter-100.png"
+                                alt="Twitter" class="icon"> Twitter</a></li>
+                    <li><a href="https://www.instagram.com" target="_blank"><img src="assets/css/img/insta-100.png"
+                                alt="Instagram" class="icon"> Instagram</a></li>
+                    <li><a href="mailto:mrcvalenzuelas@gmail.com" target="_blank"><img src="assets/css/img/email.png"
+                                alt="correo" class="icon"> Email</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Marcia Valenzuela. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

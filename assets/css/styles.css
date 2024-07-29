@@ -1,0 +1,354 @@
+/* styles.css */
+
+/* Estilos básicos */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #343a40;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+    margin-bottom: 20px;
+}
+
+.navbar-brand, .nav-link {
+    font-size: 1.2rem;
+}
+
+
+/* Estilos para la sección "Sobre mí" */
+#about {
+    background-color: #abcee2;
+    opacity: 0.9;
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+}
+
+#about .about-text {
+    flex-grow: 1;
+}
+
+#about h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#about p {
+    text-align: left;
+    font-size: 1.1rem;
+    margin: 40px;
+}
+
+#about .about-image {
+    max-width: 300px;
+    flex-shrink: 0;
+   
+}
+
+#about .about-image img {
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); 
+}
+
+#about .about-image img:hover {
+    animation: animacionimagen 2s ease 0s 1 normal forwards;
+}
+
+@keyframes animacionimagen{
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    #about {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #about .about-text, #about .about-image {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    #about .about-image {
+        margin: 0;
+    }
+}
+
+
+/* Sección "Habilidades" */
+#skills h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#skills li {
+    background-color: #ccdff2;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+/* Sección "Proyectos" */
+#projects h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#projects .col-md-4 {
+    margin-bottom: 20px;
+}
+
+#projects h3 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#projects p {
+    text-align: center;
+    font-size: 15px;
+}
+
+.container .card
+{
+    max-width: 300px;
+    height: 215px;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transition: 0.3s ease-in-out;
+}
+.container .card:hover
+{
+    height: 450px;
+}
+.container .card .imgContainer
+{
+    position: relative;
+    width:250px;
+    height:250px;
+    top:-50px;
+    left:10px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+.container .card .imgContainer img
+{
+    max-width: 100%;
+    border-radius: 4px;
+}
+.container .card .content
+{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color:#111;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease-in-out;
+}
+.container .card:hover .content
+{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+}
+
+@media (max-width: 330px){
+    .container .card .imgContainer{
+        left: -2px;
+    }
+}
+
+/* Sección "Contacto" */
+
+#contact {
+    background-color: #abcee2;
+    padding: 60px 0;
+    opacity: 0.9;
+    border-radius: 20px;
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#contact .d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact-form {
+    flex: 1 1 60%;
+    max-width: 60%;
+    align-items: center;
+}
+.contact-form form{
+    margin: 20px 30px;
+}
+
+.contact-info {
+    flex: 1 1 35%;
+    max-width: 35%;
+    padding-left: 15px;
+    margin:10px
+}
+
+.contact-info ul {
+    list-style: none;
+    padding:60px 10px;
+}
+
+.contact-info li {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info img.icon {
+    margin-right: 10px;
+    width: 36px;
+    height: 36px;
+}
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    #contact .d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form, .contact-info {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 20px;
+    }
+
+    .contact-info {
+        padding-left: 0;
+    }
+}
+
+
+/* Estilos del pie de página */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin:20px 0 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    #skills ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #skills li {
+        margin-bottom: 10px;
+    }
+
+    #projects .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #projects .col-md-4 {
+        width: 80%;
+    }
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.5); 
+}
+
+/* Estilos para el contenido del modal */
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; 
+    align-items: center;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+/* Estilos para el botón de cerrar */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
